@@ -10,7 +10,7 @@ The below table records the average time taken for response when the server is h
 5. ping - round trip time taken for a packet to reach the server.
 
 
-|  Method 	        | Local  	| Same-Zone  	|  Different Region 	|
+|  Method 	        | Local  	  | Same-Zone  	  |  Different Region 	  |
 |-------------------|-----------|---------------|-----------------------|
 |   REST add	      | 2.6ms	    | 3.015ms       | 296.68ms              |
 |   gRPC add	      | 0.77ms    | 0.90ms        | 143.92ms              |
