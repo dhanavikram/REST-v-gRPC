@@ -1,5 +1,4 @@
-Speed Comparison of REST and gRPC
----------------------------------
+# Speed Comparison of REST and gRPC
 
 The below table records the average time taken for response when the server is hosted in different machines at different locations for REST and gRPC implementation of different functions. There are four different functions:
 
