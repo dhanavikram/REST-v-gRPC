@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+// GRPC service to add two numbers
+service add {
+    rpc addTwoNumbers (addMsg) returns (addReply) {}
+}
+
+// Request for add service
+message addMsg {
+    int32 a = 1;
+    int32 b = 2;
+}
+
+// Response for add service
+message addReply {
+    int32 sum = 1;
+}
+
+//GRPC service to get a raw image and return the dimensions
+service rawImage {
+    rpc computeImage (rawImageMsg) returns (imageReply) {}
+}
+
+// Request interface for raw image
+message rawImageMsg {
+    bytes img=1;
+}
+
+// Response for image - dimensions of img
+message imageReply {
+    int32 width=1;
+    int32 height=2;
+}
+
+// GRPC service to compute dot product of two arrays
+service dotProduct {
+    rpc computeDotProduct (dotProductMsg) returns (dotProductReply) {}
+}
+
+// Request interface to get two arrays
+message dotProductMsg {
+    repeated float a = 1;
+    repeated float b = 2;
+}
+
+// Response for dot product
+message dotProductReply {
+    float dotproduct = 1;
+}
+
+// GRPC service to get a raw image and return the dimensions
+service jsonImage {
+    rpc computeJsonImage (jsonImageMsg) returns (imageReply) {} // Use same image response interface
+}
+
+// Request interface for getting an encoded image
+message jsonImageMsg {
+    string img=1;
+}
